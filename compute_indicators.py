@@ -18,19 +18,11 @@ def get_indicators():
     bal_of_power = np.array(BOP(inputs))
     accum_dist = np.array(AD(inputs))
     indicatorArray = np.vstack((moving_average_50, moving_average_200, slowk, slowd, bal_of_power, accum_dist))
-    print indicatorArray[:,60]
     return indicatorArray
 
 
-'''    
-print moving_average_50[60]
-print moving_average_200[60]
-print slowk[60]
-print slowd[60]
-print bal_of_power[60]
-print accum_dist[60]
 
-'''
+
 
 
 
