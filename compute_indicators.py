@@ -3,6 +3,12 @@ import datetime
 import talib
 from talib.abstract import *
 
+'''
+Function list:
+   get_indicators()
+   get_trades()
+'''
+
 def get_indicators():
     gbpusd = np.loadtxt('DATA/filled_in_trades.csv',delimiter=",",skiprows=1,usecols=(2,3,4,5,6))
     inputs = {
