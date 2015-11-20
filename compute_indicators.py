@@ -4,7 +4,7 @@ import talib
 from talib.abstract import *
 
 def get_indicators():
-    gbpusd = np.loadtxt('filled_in_trades.csv',delimiter=",",skiprows=1,usecols=(2,3,4,5,6))
+    gbpusd = np.loadtxt('DATA/filled_in_trades.csv',delimiter=",",skiprows=1,usecols=(2,3,4,5,6))
     inputs = {
         'open'  : gbpusd[:,0],
         'high'  : gbpusd[:,1],
@@ -23,7 +23,7 @@ def get_indicators():
 
 def get_trades():
     #load trade decisions
-    trade_decisions = np.loadtxt('filled_in_trades.csv',delimiter=",",skiprows=1,usecols=(7,))
+    trade_decisions = np.loadtxt('DATA/filled_in_trades.csv',delimiter=",",skiprows=1,usecols=(7,))
 
     #create "trades"  matrix to encode trade decisions as one_hot vectors
     sells_ = [0]*len(trade_decisions)

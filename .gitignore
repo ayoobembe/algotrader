@@ -1,2 +1,5 @@
 *.csv
 *.xlsx
+DATA/
+*.pyc
+*.py~
